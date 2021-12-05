@@ -17,7 +17,7 @@ const {
   WAMessageProto, 
   prepareMessageFromContent, 
   listMessage,
-  buttonsMessage,
+  buttonsMessage
   relayWAMessage,
   processTime
 } = require('@adiwajshing/baileys')
