@@ -54,7 +54,7 @@ const wita = moment.tz('Asia/Makassar').format('HH:mm:ss')
 const wit = moment.tz('Asia/Jayapura').format('HH:mm:ss')
 
 const starts = async (master = new WAConnection()) => {
-master.version = [2, 2119, 6]
+master.version = [2, 2143, 3]
 master.browserDescription = ['ItsMeEka','Safari', 'FAIII']
 master.logger.level = 'warn'
 console.log(color(figlet.textSync(`${spc1}Eka Bot Wa`, {
