@@ -113,8 +113,8 @@ autoreadgc = false
 autoreadpc = false
 bugc = true
 antitrol = false
-ownerN = "6288221400832"
-setgrup = "6288221400832-1620319322@g.us"
+ownerN = "6281515589573"
+setgrup = "6281515589573-1620319322@g.us"
 fakeNumber = '0@s.whatsapp.net'
 blocked = []
 shp  = '🔰'
@@ -123,8 +123,8 @@ shp3 = '🕛'
 shp4 = '🗓'
 shp5 = '🌹'
 scs  = '[ √ ] 𝚂𝚞𝚌𝚌𝚎𝚜𝚜...'
-nama = 'Whatsapp-Bot'
-fake = 'LOPE YOU ADEL'
+nama = 'R-BOT'
+fake = 'R-BOT'
 harga = '99999999999'
 settroli = '2021'
 cokmatane = '359996400'
@@ -165,7 +165,7 @@ const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n'
             + 'FN:My Owner シ︎\n'
             + 'ORG:Owner Bot;\n'
-            + 'TEL;type=CELL;type=VOICE;waid=6288221400832:+62 882-2140-0832\n'
+            + 'TEL;type=CELL;type=VOICE;waid=6281515589573:+62 815-1558-9573\n'
             + 'END:VCARD'
             
             
@@ -365,7 +365,7 @@ const totalchat = await master.chats.all()
 const botNumber = master.user.jid
 const botN = botNumber.replace('@s.whatsapp.net', '')
 const ownerNumber = [`${ownerN}@s.whatsapp.net`] 
-const ownerContact = [`6288221400832`,`0`]
+const ownerContact = [`6281515589573`,`0`]
 const isGroup = from.endsWith('@g.us')
 const sender = god.key.fromMe ? master.user.jid : isGroup ? god.participant : god.key.remoteJid
 const senderNumber = sender.split("@")[0]
@@ -708,26 +708,9 @@ fs.writeFile(`./sticker/${name}.exif`, buffer, (err) => {	return `./sticker/${na
 
 //***MENUNYA***//
 uptime = process.uptime()
-eka = "6288221400832@s.whatsapp.net"
-menu1 = `
-${Hari} Kak ${pushname}
-⠀╱▔▔▔▔▔╲⠀⠀
-⠀╱⠀⠀╱▔╲╲╲▏⠀⠀⠀
-╱⠀⠀╱━╱▔▔▔▔▔╲━╮⠀⠀
-▏⠀▕┃▕╱▔╲╱▔╲▕╮┃⠀⠀
-▏⠀▕╰━▏▊▕▕▋▕▕━╯⠀⠀
-╲⠀⠀╲╱▔╭╮▔▔┳╲╲⠀⠀⠀
-⠀╲⠀⠀▏╭━━━━╯▕▕⠀⠀⠀
-⠀⠀╲⠀╲▂▂▂▂▂▂╱╱⠀⠀⠀
-⠀⠀⠀⠀▏⠀⠀⠀⠀⠀⠀⠀⠀⠀╲⠀
-⠀⠀⠀⠀▏⠀⠀⠀⠀⠀⠀▕╲⠀⠀╲
-⠀╱▔╲▏⠀⠀⠀⠀⠀⠀▕╱▔╲▕
-⠀▏ ⠀⠀⠀╰⠀⠀⠀⠀╯⠀⠀⠀▕▕
-⠀╲⠀⠀⠀╲⠀⠀⠀⠀╱⠀⠀⠀╱⠀╲
-⠀⠀╲⠀⠀▕▔▔▔▔▏⠀⠀╱╲╲╲▏
-⠀╱▔⠀⠀▕⠀⠀⠀⠀▏⠀⠀▔╲▔▔
-⠀╲▂▂▂╱⠀⠀⠀⠀╲▂▂▂╱⠀
-┌───「${shp5} INFO-TOBI ${shp5}」
+eka = "6281515589573@s.whatsapp.net"
+menu1 = `     
+┌───「${shp5} R-BOT ${shp5}」
 │✯
 ├ Creator : @${eka.split('@')[0]} 
 ├ Hari : ${week} ${weton} 
@@ -735,9 +718,9 @@ ${Hari} Kak ${pushname}
 ├ Kalender :${Tanggal} 
 ├ Mode : ${public ? 'publik' : 'self'} 
 ├ Server : Baileys
-├ Browser : Chrome
+├ Browser : Safari
 ├ Version : 5.0
-├ Ver : Termux
+├ Ver : Heroku
 ├ Jumlah Fitur : 185
 ├ Runtime : ${kyun(uptime)}
 ├ Device : Dandelion
@@ -972,6 +955,7 @@ ${Hari} Kak ${pushname}
 ├ Denis
 ├ Hexagonz
 ├ Eka
+├ Rama
 ├ Yogi Pw
 ├ Dappa 
 ├ All Creator Bot Whatsapp
@@ -2211,10 +2195,11 @@ case 'slot':
     		console.log(teks)
    			})
     		break
-              case 'pantun':
-				anu = await fetchJson(`https://bx-hunter.herokuapp.com/api/pantun?apikey=${HunterApi}`, {method: 'get'})
-				kata = anu.result
-				reply(kata)
+              case 'pantun':{
+				const pantun = ["\nAnak tikus rindu ibunya\n\nsombong nich ceritanya","\nAda kepompong ada kupu\n\nbales donk sms dari aku","\nBeli bandeng\n\ndi Malaysia\n\ngue ganteng\n\nkayak Pasha","\nHati siapa tak bimbang\n\nsitu botak minta dikepang","\nBuah semangka\n\nbuah duren\n\nnggak nyangka\n\ngue keren\n ","\n Mawar bersemi\n\ndi batang kayu\n\ndo you love me\n\nlike i love you","\nBurung perkutut\n\nburung kuthilang\n\nkamu kentut\n\nenggak bilang bilang","\nBread is roti\n\nshadow is bayang\n\nbefore you mati\n\nbetter you sembahyang","\nJangan takut\n\njangan khawatir\n\nitu kentut\n\nbukan petir","\nBeli ikan di pasar malam\n\ndasar bego ni kawan","\nMakan duren sambil ngelamun,\n\nHati-hati ketelen ntar bijinya","\nDi  sana gunung, di sini gunung\n\nCiptaan Tuhan deh","\nKan bandeng\n\nmakan kawat\n\norang ganteng\n\nnumpang lewat","\nOrang ganteng\n\nsuka sama si Rini\n\ngak seneng\n\nmaju sini","\nMelon manis di air es\n\nke mana aja lo gak pernah sms","\nJambu merah\n\ndi dinding\n\njangan marah\n\njust kidding","\nBuah semangka\n\nbuah manggis\n\nnggak nyangka\n\ngue manis","\nMen sana\n\nin corpore sano\n\ngue maen ke sana,\n\nelo maen ke sono!","\nBuah apel\n\ndi air payau\n\nnggak level\n\nlayauuuuuuu","\nDi sini bingung, di sana linglung\n\nemangnya enak, enggak nyambung…","\nBuah semangka berdaun sirih\n\nBuah ajaib kali yah","\nPilih suara harpa yang jelas.\n\nTali di harpa diikat cinta","\nCiuman di pipi\n\nciuman di dahi\n\nApa yang dicium sesudah lah cinta?","\nSepandai-pandai tupai melompat\n\nPolisi lebih pandai melompat","\nDua tiga kacang tanah\n\nenggak ada pacar yang datang ke rumah","\nDapet kado isinya tomat\n\nBodo amat!!","\nDulu delman, sekarang gokar\n\ndulu teman, sekarang pacar","\nStroberi mangga apel\n\nsorry gak level","\nBola pingpong dimakan gelatik\n\nBiar ompong yang penting cantik\n","\nMata belo,\n\nala komedian.\n\ngue sama elo?\n\nmaunya jadian.","\nTunda lapar,\n\nmakan indomi.\n\nhati menggelepar,\n\ncintapun bersemi.","\nPotong kuku,\n\npendek-pendek.\n\nhatiku beku,\n\nsi abang mendadak ngondek.","\nBeli ketan,\n\nbeli kain songket.\n\nbiar udah mantan,\n\nkita tetep lengket.","\nKe pasar, nyari obat gatal\n\nDasar, gak modal!","\nMakan semangka,\n\nmakan kedondong.\n\nkalau suka,\n\nnyatain dong.","\nGa punya pendirian,\n\nbikin jemu.\n\nga mau sendirian,\n\nmaunya bobo sama kamu.","\nNembak itik,\n\nlangsung kena.\n\nkamu cantik,\n\nhey nona!","\nKotak amal,\n\ndigoyang-goyang.\n\nkemarin aku diramal,\n\njodohnya sama abang.","\nHari Jumat,\n\npada pake batik.\n\nsalam hormat,\n\nbuat neng cantik.","\nPecahan genting,\n\ndi bawah kursi.\n\nbetah meeting,\n\nkarena si boss seksi.","\nNangis-nangis,\n\nmobil kena srempet.\n\nneng manis,\n\nmau dong dipepet.","\nPanasin mentega,\n\nkarena mulai beku.\n\nkamu mau ga,\n\njadi imamku?","\nPotong sebahu,\n\nbiar ga sendu.\n\nkamu tahu?\n\nAku rindu.","\nJangan tanya,\n\nkapan lulus kuliah.\n\nga dapet anaknya,\n\nmamanya boleh lah","\nBikin anak,\n\ndi pojokan sekolah\n\nkalau mau enak,\n\nnikah dulu lah.","\nMain mata,\n\nmesem-mesem.\n\nneng tetep cinta,\n\nbiarpun abang keteknya asem.","\nTiduran di tandu,\n\nberjam-jam.\n\nhati merindu,\n\nmata sulit memejam.","\nUbek-ubek peti,\n\ncari gunting.\n\nsaking cinta mati,\n\nneng rela bunting.","\nNamanya penjahat,\n\npolisi jadi inceran.\n\nbosan jadi temen curhat,\n\nmaunya pacaran.","\nKe salon creambath,\n\nbiar aliran darah lancar.\n\nbosen ah jadi sahabat,\n\nmaunya jadi pacar!"]
+				const ran_pantun = pantun[Math.floor(Math.random() * pantun.length)]
+     			reply(`*Pantun :* \n${ran_pantun}`)
+				}			
 				break
 				case 'dare':
 					const dare = ['Kirim pesan ke mantan kamu dan bilang "aku masih suka sama kamu', 'telfon crush/pacar sekarang dan ss ke pemain', 'pap ke salah satu anggota grup', 'Bilang "KAMU CANTIK BANGET NGGAK BOHONG" ke cowo', 'ss recent call whatsapp', 'drop emot 🤥 setiap ngetik di gc/pc selama 1 hari', 'kirim voice note bilang can i call u baby?', 'drop kutipan lagu/quote, terus tag member yang cocok buat kutipan itu', 'pake foto sule sampe 3 hari', 'ketik pake bahasa daerah 24 jam', 'ganti nama menjadi "gue anak lucinta luna" selama 5 jam', 'chat ke kontak wa urutan sesuai %batre kamu, terus bilang ke dia "i lucky to hv you', 'prank chat mantan dan bilang " i love u, pgn balikan', 'record voice baca surah al-kautsar', 'bilang "i hv crush on you, mau jadi pacarku gak?" ke lawan jenis yang terakhir bgt kamu chat (serah di wa/tele), tunggu dia bales, kalo udah ss drop ke sini', 'sebutkan tipe pacar mu!', 'snap/post foto pacar/crush', 'teriak gajelas lalu kirim pake vn kesini', 'pap mukamu lalu kirim ke salah satu temanmu', 'kirim fotomu dengan caption, aku anak pungut', 'teriak pake kata kasar sambil vn trus kirim kesini', 'teriak " anjimm gabutt anjimmm " di depan rumah mu', 'ganti nama jadi " BOWO " selama 24 jam', 'Pura pura kerasukan, contoh : kerasukan maung, kerasukan belalang, kerasukan kulkas, dll']
@@ -2819,7 +2804,7 @@ case 'author':
    {
   ini_list.push({
             "displayName": 'eka',
-            "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:𝐄 𝐊 𝐀\nitem1.TEL;waid=6288221400832:6288221400832\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
+            "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:𝐄 𝐊 𝐀\nitem1.TEL;waid=6281515589573:6281515589573\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
           },
 {
             "displayName": 'mark',
