@@ -17,7 +17,7 @@ const {
   WAMessageProto, 
   prepareMessageFromContent, 
   listMessage,
-  buttonsMessage
+  buttonsMessage,
   relayWAMessage,
   processTime
 } = require('@adiwajshing/baileys')
@@ -36,9 +36,9 @@ const { color } = require('./lib/color')
 const colors = require('colors')
 const chalk = require ("chalk")
 fakenomor = '0@s.whatsapp.net'
-const gcrevoke = ["6288221400832-1620319322@g.us"]
+const gcrevoke = ["6281515589573-1620319322@g.us"]
 fakeuy = '🌹 𝐈𝐭𝐬 𝐌𝐞 𝐄𝐤𝐚 🌹'
-owner = "6288221400832@s.whatsapp.net"
+owner = "6281515589573@s.whatsapp.net"
 spc1 = '         '
 spc2 = '\n                           '
 spc3 = '                   '
@@ -74,26 +74,26 @@ console.log(color(`${spc4}< ================================================== >
 console.log(banner.string)
 	        master.on('qr', () => {
         	console.log(color('[','white'),color('∆','red'),color(']','white'),color('scan this QR code Now...','white'),color('QR code up to','red'),color('X','lime'),color('20detik','red'))
-          master.sendMessage(`6288221400832@s.whatsapp.net`, `「 *NOTIFICATION!* 」\n\n _Bot Berhasil Terhubung!_`, MessageType.extendedText)
+          master.sendMessage(`6281515589573@s.whatsapp.net`, `「 *NOTIFICATION!* 」\n\n _Bot Berhasil Terhubung!_`, MessageType.extendedText)
             })
 
 fs.existsSync('./workspace/QRnya.json') && master.loadAuthInfo('./workspace/QRnya.json')
 	        master.on('connecting', () => {
 	        console.log(color('[ SYSTEM ]','orange'), color('Menyambungkan...','white'))
-		    start('2', "\nMenunggu Tersambung....\n  「 🌹 𝐈𝐭𝐬𝐌𝐞𝐄𝐤𝐚 ]")
+		    start('2', "\nMenunggu Tersambung....\n  「 🌹 𝐑-𝐁𝐎𝐓 ]")
         	})
 	        master.on('open', () => {
 	        console.log(color('[ SYSTEM ]','orange'), color('Tersambung...','magenta'))   
 	    	success('2', "Connect 100%...")
 	    	console.log((color('𝑯𝑬𝑳𝑳𝑶𝑾𝑶𝑹𝑳𝑫 ','cyan')))
 	    	  console.log(color('[ BOT ]','purple'), color('𝑾𝑬𝑳𝑪𝑶𝑴𝑬 𝑩𝑨𝑪𝑲 ','cyan'))
-  	  	    console.log(color('[ BOT ]','purple'), color('𝑰𝑵𝑭𝑶 𝑾𝑯𝑨𝑻𝑺𝑨𝑷𝑷 : 6288221400832','cyan'))   
+  	  	    console.log(color('[ BOT ]','purple'), color('𝑰𝑵𝑭𝑶 𝑾𝑯𝑨𝑻𝑺𝑨𝑷𝑷 : 6281515589573','cyan'))   
             console.log(color('[ BOT ]','purple'), color('𝑺𝑻𝑨𝑻𝑼𝑺 : 𝑶𝑵𝑳𝑰𝑵𝑬 ','cyan'))   
   	  	    console.log(color('[ BOT ]','purple'), color('𝑺𝑪𝑹𝑰𝑷𝑻 𝑺𝑼𝑪𝑪𝑬𝑺𝑺 𝑻𝑶 𝑹𝑼𝑵...','cyan'))   
   	      	})         
             await master.connect({timeoutMs: 30*1000})
             fs.writeFileSync('./workspace/QRnya.json', JSON.stringify(master.base64EncodedAuthInfo(), null, '\t'))            
-           forks('2',colors.bold.white("\nMenunggu Pesan Baru....\n  「 🌹 𝐈𝐭𝐬𝐌𝐞𝐄𝐤𝐚 ]"));
+           forks('2',colors.bold.white("\nMenunggu Pesan Baru....\n  「 🌹 𝐑-𝐁𝐎𝐓 ]"));
            
 master.on('chat-update', async (message) => {
 require('./workspace/server.js')(master, message)
