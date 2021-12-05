@@ -993,7 +993,7 @@ await master.sendMessage(from, gbuttonan, MessageType.buttonsMessage,{contextInf
 	break
 case 'donasi':
 				case 'donate':
-					master.sendMessage(from, 'pulsa : _088-221-400-832_\n dana : _088-221-400-832_\n donasi seikhlasnya aja ya ngab :), jangan terpaksa..', text, { quoted: ftroli })
+					master.sendMessage(from, 'pulsa : _081515589573_\n dana : _088-221-400-832_\n donasi seikhlasnya aja ya ngab :), jangan terpaksa..', text, { quoted: ftroli })
 					break
 case 'multipref': case 'multiprefix':
 if(!itsMe && !isOwner) return
