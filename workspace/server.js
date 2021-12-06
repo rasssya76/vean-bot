@@ -2867,12 +2867,7 @@ break
 					} else {
 						reply('enable untuk mengaktifkan, disable untuk menonaktifkan')
 					}
-					break 
-				               	case 'kick': case 'headsot': case 'hmm'								 
-									if (!isGroupAdmins) return reply(mess.only.admin)
-									if (!isBotGroupAdmins) return reply(`Jadikan Bot Sebagai Admin Group!`)
-									kick(from, mentionUser)
-									break
+					break 			            
            case 'tag':
 			if (args.length < 1) return reply(`Penggunaan ${prefix}tag 62xnxx`)
             var nomqm = `${body.slice(5)}@s.whatsapp.net`
@@ -2910,6 +2905,13 @@ break
 		    master.groupMakeAdmin(from, [promote])
 						reply('Sukses promote member')
 						break
+   	case 'kick': case 'headsot': case 'hmm'
+
+   	if (!isGroup) return reply(mess.only.group)
+    if (!isGroupAdmins) return reply(mess.only.admin)
+   	if (!isBotGroupAdmins) return reply(`Jadikan Bot Sebagai Admin Group!`)
+	kick(from, mentionUser)
+    break						
 				case 'linkgrup':
 				case 'linkgroup':
 				case 'linkgc':
