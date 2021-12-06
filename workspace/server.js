@@ -2086,7 +2086,7 @@ case 'maker2d2':
 									])
 									.on('error', () => reply(mess.error))
 									.on('exit', () => {
-										master.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkiri.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption: `Jangan sampai ketahuan``})
+										master.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkiri.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption:'Jangan sampai ketahuan'`})
 										limitAdd(sender, limit)
 										})
 									}
@@ -2114,7 +2114,7 @@ case 'maker2d2':
 									])
 									.on('error', () => reply(mess.error))
 									.on('exit', () => {
-										master.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkanan.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption: `Jangan sampai ketahuan``})
+										master.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkanan.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption:'Jangan sampai ketahuan'`})
 										limitAdd(sender, limit)
 										})
 									}
@@ -2142,7 +2142,7 @@ case 'maker2d2':
 									])
 									.on('error', () => reply(mess.error))
 									.on('exit', () => {
-										master.sendMessage(from, fs.readFileSync('./media/nulis/images/folio/setelahkiri.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption: `Jangan sampai ketahuan``})
+										master.sendMessage(from, fs.readFileSync('./media/nulis/images/folio/setelahkiri.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption:'Jangan sampai ketahuan'`})
 										limitAdd(sender, limit)
 										})
 									}
@@ -2170,7 +2170,7 @@ case 'maker2d2':
 									])
 									.on('error', () => reply(mess.error))
 									.on('exit', () => {
-										master.sendMessage(from, fs.readFileSync('./media/nulis/images/folio/setelahkanan.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption: `Jangan sampai ketahuan`})
+										master.sendMessage(from, fs.readFileSync('./media/nulis/images/folio/setelahkanan.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption:'Jangan sampai ketahuan'})
 										limitAdd(sender, limit)
 									})
 									}
