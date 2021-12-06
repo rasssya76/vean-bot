@@ -884,10 +884,7 @@ menu1 = `
 │✯
 ├───「${shp5} MAKER MENU${shp5}」
 │✯
-├ ${shp} ${prefix}foliokiri 「 text 」
-├ ${shp} ${prefix}foliokanan 「 text 」
-├ ${shp} ${prefix}nuliskanan 「 text 」
-├ ${shp} ${prefix}nuliskiri 「 text 」
+├ ${shp} ${prefix}nulis 「 text 」
 ├ ${shp} ${prefix}maker2d2 「 text 」
 ├ ${shp} ${prefix}maker2d3 「 text 」
 ├ ${shp} ${prefix}maker2d4 「 text 」
@@ -2063,110 +2060,13 @@ case 'maker2d2':
 					buffer1 = await getBuffer(anu.result.url)
 					master.sendMessage(from, buffer1, image, {quoted: god, thumbnail: fakeimg4})
 					break				 
-				            	case 'nuliskiri': 			 
-									if (args.length < 1) return reply('mau nulis apa?')
-									reply(mess.wait)
-									const tulisan = q
-									const splitText = tulisan.replace(/(\S+\s*){1,9}/g, '$&\n')
-									const fixHeight = splitText.split('\n').slice(0, 31).join('\n')
-									spawn('convert', [
-									'./media/nulis/images/buku/sebelumkiri.jpg',
-									'-font',
-									'./media/nulis/font/Indie-Flower.ttf',
-									'-size',
-									'960x1280',
-									'-pointsize',
-									'22',
-									'-interline-spacing',
-									'2',
-									'-annotate',
-									'+140+153',
-									fixHeight,
-									'./media/nulis/images/buku/setelahkiri.jpg'
-									])
-									.on('error', () => reply(mess.error))
-									.on('exit', () => {
-										master.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkiri.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption:'Jangan sampai ketahuan'})									 
-			  					        break
-					        	case 'nuliskanan': 
-						            if (args.length < 1) return reply('mau nulis apa?')
-									reply(mess.wait)
-									const tulisan = q
-									const splitText = tulisan.replace(/(\S+\s*){1,9}/g, '$&\n')
-									const fixHeight = splitText.split('\n').slice(0, 31).join('\n')
-									spawn('convert', [
-									'./media/nulis/images/buku/sebelumkanan.jpg',
-									'-font',
-									'./media/nulis/font/Indie-Flower.ttf',
-									'-size',
-									'960x1280',
-									'-pointsize',
-									'23',
-									'-interline-spacing',
-									'2',
-									'-annotate',
-									'+128+129',
-									fixHeight,
-									'./media/nulis/images/buku/setelahkanan.jpg'
-									])
-									.on('error', () => reply(mess.error))
-									.on('exit', () => {
-										master.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkanan.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption:'Jangan sampai ketahuan'})																		 
-									break
-						        case 'foliokiri': 
-						            if (args.length < 1) return reply('mau nulis apa?')
-									reply(mess.wait)
-									const tulisan = q
-									const splitText = tulisan.replace(/(\S+\s*){1,13}/g, '$&\n')
-									const fixHeight = splitText.split('\n').slice(0, 38).join('\n')
-									spawn('convert', [
-									'./media/nulis/images/folio/sebelumkiri.jpg',
-									'-font',
-									'./media/nulis/font/Indie-Flower.ttf',
-									'-size',
-									'1720x1280',
-									'-pointsize',
-									'23',
-									'-interline-spacing',
-									'4',
-									'-annotate',
-									'+48+185',
-									fixHeight,
-									'./media/nulis/images/folio/setelahkiri.jpg'
-									])
-									.on('error', () => reply(mess.error))
-									.on('exit', () => {
-										master.sendMessage(from, fs.readFileSync('./media/nulis/images/folio/setelahkiri.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption:'Jangan sampai ketahuan'})										
-										})
-									}
-									break
-						case 'foliokanan': 
-						         	if (args.length < 1) return reply('mau nulis apa?')
-									reply(mess.wait)
-									const tulisan = q
-									const splitText = tulisan.replace(/(\S+\s*){1,13}/g, '$&\n')
-									const fixHeight = splitText.split('\n').slice(0, 38).join('\n')
-									spawn('convert', [
-									'./media/nulis/images/folio/sebelumkanan.jpg',
-									'-font',
-									'./media/nulis/font/Indie-Flower.ttf',
-									'-size',
-									'960x1280',
-									'-pointsize',
-									'23',
-									'-interline-spacing',
-									'3',
-									'-annotate',
-									'+89+190',
-									fixHeight,
-									'./media/nulis/images/folio/setelahkanan.jpg'
-									])
-									.on('error', () => reply(mess.error))
-									.on('exit', () => {
-										master.sendMessage(from, fs.readFileSync('./media/nulis/images/folio/setelahkanan.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption:'Jangan sampai ketahuan'})										
-									})
-									}
-									break
+case 'nulis':
+if (!q) return reply('Textnya mana gan?')
+reply(mess.wait)
+kon = (`https://api.zeks.me/api/nulis?apikey=apivinz&text=${q}`)
+anu = await getBuffer(kon)
+master.sendMessage(from, anu, image, { quoted: god, thumbnail: fakeimg4 })
+break
 //*****asupan****//
 case '+62':
 reply(mess.wait)
