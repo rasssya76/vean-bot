@@ -2063,34 +2063,121 @@ case 'maker2d2':
 					buffer1 = await getBuffer(anu.result.url)
 					master.sendMessage(from, buffer1, image, {quoted: god, thumbnail: fakeimg4})
 					break
-					case 'nuliskiri':
-if (!q) return reply('Textnya mana gan?')
-reply(mess.wait)
-kon = (`https://hardianto-chan.herokuapp.com/api/nuliskiri?text=${q}&apikey=hardianto`)
-anu = await getBuffer(kon)
-master.sendMessage(from, anu, image, { quoted: god, thumbnail: fakeimg4 })
-break
-case 'nuliskanan':
-if (!q) return reply('Textnya mana gan?')
-reply(mess.wait)
-kon = (`https://hardianto-chan.herokuapp.com/api/nuliskanan?text=${q}&apikey=hardianto`)
-anu = await getBuffer(kon)
-master.sendMessage(from, anu, image, { quoted: god, thumbnail: fakeimg4 })
-break
-case 'foliokanan':
-if (!q) return reply('Textnya mana gan?')
-reply(mess.wait)
-kon = (`https://hardianto-chan.herokuapp.com/api/foliokanan?text=${q}&apikey=hardianto`)
-anu = await getBuffer(kon)
-master.sendMessage(from, anu, image, { quoted: god, thumbnail: fakeimg4 })
-break
-case 'foliokiri':
-if (!q) return reply('Textnya mana gan?')
-reply(mess.wait)
-kon = (`https://hardianto-chan.herokuapp.com/api/foliokiri?text=${q}&apikey=hardianto`)
-anu = await getBuffer(kon)
-master.sendMessage(from, anu, image, { quoted: god, thumbnail: fakeimg4 })
-break
+					case 'nulis':
+									reply(`*Example*\n${prefix}nuliskiri\n${prefix}nuliskanan\n${prefix}foliokiri\n${prefix}foliokanan`)
+									break
+						case 'nuliskiri':						 
+									if (args.length < 1) return reply(`Kirim perintah *${prefix}nuliskiri* teks`)
+									reply(mess.wait)
+									const tulisan = q
+									const splitText = tulisan.replace(/(\S+\s*){1,9}/g, '$&\n')
+									const fixHeight = splitText.split('\n').slice(0, 31).join('\n')
+									spawn('convert', [
+									'./media/nulis/images/buku/sebelumkiri.jpg',
+									'-font',
+									'./media/nulis/font/Indie-Flower.ttf',
+									'-size',
+									'960x1280',
+									'-pointsize',
+									'22',
+									'-interline-spacing',
+									'2',
+									'-annotate',
+									'+140+153',
+									fixHeight,
+									'./media/nulis/images/buku/setelahkiri.jpg'
+									])
+									.on('error', () => reply(mess.error))
+									.on('exit', () => {
+										master.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkiri.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption: `Jangan sampai ketahuan``})
+										limitAdd(sender, limit)
+										})
+									}
+									break
+						case 'nuliskanan': 
+						            if (args.length < 1) return reply(`Kirim perintah *${prefix}nuliskanan* teks`)
+									reply(mess.wait)
+									const tulisan = q
+									const splitText = tulisan.replace(/(\S+\s*){1,9}/g, '$&\n')
+									const fixHeight = splitText.split('\n').slice(0, 31).join('\n')
+									spawn('convert', [
+									'./media/nulis/images/buku/sebelumkanan.jpg',
+									'-font',
+									'./media/nulis/font/Indie-Flower.ttf',
+									'-size',
+									'960x1280',
+									'-pointsize',
+									'23',
+									'-interline-spacing',
+									'2',
+									'-annotate',
+									'+128+129',
+									fixHeight,
+									'./media/nulis/images/buku/setelahkanan.jpg'
+									])
+									.on('error', () => reply(mess.error))
+									.on('exit', () => {
+										master.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkanan.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption: `Jangan sampai ketahuan``})
+										limitAdd(sender, limit)
+										})
+									}
+									break
+						case 'foliokiri': 
+						            if (args.length < 1) return reply(`Kirim perintah *${prefix}foliokiri* teks`)
+									reply(mess.wait)
+									const tulisan = q
+									const splitText = tulisan.replace(/(\S+\s*){1,13}/g, '$&\n')
+									const fixHeight = splitText.split('\n').slice(0, 38).join('\n')
+									spawn('convert', [
+									'./media/nulis/images/folio/sebelumkiri.jpg',
+									'-font',
+									'./media/nulis/font/Indie-Flower.ttf',
+									'-size',
+									'1720x1280',
+									'-pointsize',
+									'23',
+									'-interline-spacing',
+									'4',
+									'-annotate',
+									'+48+185',
+									fixHeight,
+									'./media/nulis/images/folio/setelahkiri.jpg'
+									])
+									.on('error', () => reply(mess.error))
+									.on('exit', () => {
+										master.sendMessage(from, fs.readFileSync('./media/nulis/images/folio/setelahkiri.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption: `Jangan sampai ketahuan``})
+										limitAdd(sender, limit)
+										})
+									}
+									break
+						case 'foliokanan': 
+						         	if (args.length < 1) return reply(`Kirim perintah *${prefix}foliokanan* teks`)
+									reply(mess.wait)
+									const tulisan = q
+									const splitText = tulisan.replace(/(\S+\s*){1,13}/g, '$&\n')
+									const fixHeight = splitText.split('\n').slice(0, 38).join('\n')
+									spawn('convert', [
+									'./media/nulis/images/folio/sebelumkanan.jpg',
+									'-font',
+									'./media/nulis/font/Indie-Flower.ttf',
+									'-size',
+									'960x1280',
+									'-pointsize',
+									'23',
+									'-interline-spacing',
+									'3',
+									'-annotate',
+									'+89+190',
+									fixHeight,
+									'./media/nulis/images/folio/setelahkanan.jpg'
+									])
+									.on('error', () => reply(mess.error))
+									.on('exit', () => {
+										master.sendMessage(from, fs.readFileSync('./media/nulis/images/folio/setelahkanan.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption: `Jangan sampai ketahuan`})
+										limitAdd(sender, limit)
+									})
+									}
+									break
 //*****asupan****//
 case '+62':
 reply(mess.wait)
@@ -2709,7 +2796,7 @@ ${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.bat
                    break      
         case 'tiktoknowm':   case 'tiktok':
 if (!q) return reply('Linknya?')
-									
+									reply(mess.wait)
 									if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply('Invalid link')
 									let nowem = q
 									hx.ttdownloader(nowem)
@@ -2724,6 +2811,7 @@ if (!q) return reply('Linknya?')
 									break							 
 			  case 'tiktokaudio': 
 if (!q) return reply('Linknya?')
+reply(mess.wait)
 link = args[0]
 get_audio = await getBuffer(`https://api.lolhuman.xyz/api/tiktokmusic?apikey=${lolkey}&url=${link}`)
 master.sendMessage(from, get_audio, audio, { mimetype: Mimetype.mp4Audio, quoted: god})
