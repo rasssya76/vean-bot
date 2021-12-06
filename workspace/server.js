@@ -2062,12 +2062,9 @@ case 'maker2d2':
 					anu = await fetchJson(`https://api-xchillds.herokuapp.com/api/textmaker/roses?text=${makell}&theme=golden&apikey=${xchillds}`)
 					buffer1 = await getBuffer(anu.result.url)
 					master.sendMessage(from, buffer1, image, {quoted: god, thumbnail: fakeimg4})
-					break
-					case 'nulis':
-									reply(`*Example*\n${prefix}nuliskiri\n${prefix}nuliskanan\n${prefix}foliokiri\n${prefix}foliokanan`)
-									break
-						case 'nuliskiri':						 
-									if (args.length < 1) return reply(`Kirim perintah *${prefix}nuliskiri* teks`)
+					break				 
+						case 'nuliskiri': case 'nulis':					 
+									if (args.length < 1) return reply('mau nulis apa?')
 									reply(mess.wait)
 									const tulisan = q
 									const splitText = tulisan.replace(/(\S+\s*){1,9}/g, '$&\n')
@@ -2095,7 +2092,7 @@ case 'maker2d2':
 									}
 									break
 						case 'nuliskanan': 
-						            if (args.length < 1) return reply(`Kirim perintah *${prefix}nuliskanan* teks`)
+						            if (args.length < 1) return reply('mau nulis apa?')
 									reply(mess.wait)
 									const tulisan = q
 									const splitText = tulisan.replace(/(\S+\s*){1,9}/g, '$&\n')
@@ -2123,7 +2120,7 @@ case 'maker2d2':
 									}
 									break
 						case 'foliokiri': 
-						            if (args.length < 1) return reply(`Kirim perintah *${prefix}foliokiri* teks`)
+						            if (args.length < 1) return reply('mau nulis apa?')
 									reply(mess.wait)
 									const tulisan = q
 									const splitText = tulisan.replace(/(\S+\s*){1,13}/g, '$&\n')
@@ -2151,7 +2148,7 @@ case 'maker2d2':
 									}
 									break
 						case 'foliokanan': 
-						         	if (args.length < 1) return reply(`Kirim perintah *${prefix}foliokanan* teks`)
+						         	if (args.length < 1) return reply('mau nulis apa?')
 									reply(mess.wait)
 									const tulisan = q
 									const splitText = tulisan.replace(/(\S+\s*){1,13}/g, '$&\n')
