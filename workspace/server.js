@@ -2066,8 +2066,7 @@ case 'maker2d2':
 					case 'nulis':
 									reply(`*Example*\n${prefix}nuliskiri\n${prefix}nuliskanan\n${prefix}foliokiri\n${prefix}foliokanan`)
 									break
-						case 'nuliskiri':{
-									if (isLimit(sender, isPremium, isOwner, limitawal, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+						case 'nuliskiri':						 
 									if (args.length < 1) return reply(`Kirim perintah *${prefix}nuliskiri* teks`)
 									reply(mess.wait)
 									const tulisan = q
@@ -2095,9 +2094,8 @@ case 'maker2d2':
 										})
 									}
 									break
-						case 'nuliskanan':{
-									if (isLimit(sender, isPremium, isOwner, limitawal, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-									if (args.length < 1) return reply(`Kirim perintah *${prefix}nuliskanan* teks`)
+						case 'nuliskanan': 
+						            if (args.length < 1) return reply(`Kirim perintah *${prefix}nuliskanan* teks`)
 									reply(mess.wait)
 									const tulisan = q
 									const splitText = tulisan.replace(/(\S+\s*){1,9}/g, '$&\n')
@@ -2124,9 +2122,8 @@ case 'maker2d2':
 										})
 									}
 									break
-						case 'foliokiri':{
-									if (isLimit(sender, isPremium, isOwner, limitawal, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-									if (args.length < 1) return reply(`Kirim perintah *${prefix}foliokiri* teks`)
+						case 'foliokiri': 
+						            if (args.length < 1) return reply(`Kirim perintah *${prefix}foliokiri* teks`)
 									reply(mess.wait)
 									const tulisan = q
 									const splitText = tulisan.replace(/(\S+\s*){1,13}/g, '$&\n')
@@ -2153,9 +2150,8 @@ case 'maker2d2':
 										})
 									}
 									break
-						case 'foliokanan':{
-									if (isLimit(sender, isPremium, isOwner, limitawal, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-									if (args.length < 1) return reply(`Kirim perintah *${prefix}foliokanan* teks`)
+						case 'foliokanan': 
+						         	if (args.length < 1) return reply(`Kirim perintah *${prefix}foliokanan* teks`)
 									reply(mess.wait)
 									const tulisan = q
 									const splitText = tulisan.replace(/(\S+\s*){1,13}/g, '$&\n')
