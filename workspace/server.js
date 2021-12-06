@@ -2868,8 +2868,7 @@ break
 						reply('enable untuk mengaktifkan, disable untuk menonaktifkan')
 					}
 					break 
-				               	case 'kick': case 'headsot': case 'hmm'
-									if (!isGroup) return reply(mess.only.group)
+				               	case 'kick': case 'headsot': case 'hmm'								 
 									if (!isGroupAdmins) return reply(mess.only.admin)
 									if (!isBotGroupAdmins) return reply(`Jadikan Bot Sebagai Admin Group!`)
 									kick(from, mentionUser)
