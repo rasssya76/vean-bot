@@ -2904,14 +2904,7 @@ break
 			promote = god.message.extendedTextMessage.contextInfo.participant
 		    master.groupMakeAdmin(from, [promote])
 						reply('Sukses promote member')
-						break
-   	case 'kick': case 'headsot': case 'hmm'
-
-   	if (!isGroup) return reply(mess.only.group)
-    if (!isGroupAdmins) return reply(mess.only.admin)
-   	if (!isBotGroupAdmins) return reply(`Jadikan Bot Sebagai Admin Group!`)
-	kick(from, mentionUser)
-    break						
+						break			
 				case 'linkgrup':
 				case 'linkgroup':
 				case 'linkgc':
