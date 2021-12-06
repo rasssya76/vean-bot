@@ -953,7 +953,7 @@ menu1 = `
 ├ Dehanj1ng
 ├ Rival
 ├ Denis
-├ Hexagonz
+├ mastergonz
 ├ Eka
 ├ Rama
 ├ Yogi Pw
@@ -2496,15 +2496,15 @@ if (!isOwner && !god.key.fromMe) return reply(mess.only.ownerB)
 				return master.sendMessage(from, JSON.stringify(eval(process.exit())))
 				reply('Okey')
 				break
-				//*****HEXAGONZ***//
+				//*****masterGONZ***//
 				case "lirik":
         if (!q) return reply("lagu apa?");
-        let song = await hx.lirik(q);
+        let song = await god.lirik(q);
         sendMediaURL(from, song.thumb, song.lirik);
         break
       case "otaku":
         if (!q) return reply("judul animenya?");
-        let anime = await hx.otakudesu(q);
+        let anime = await god.otakudesu(q);
         rem = `*Judul* : ${anime.judul}
 *Jepang* : ${anime.jepang}
 *Rating* : ${anime.rate}
@@ -2522,7 +2522,7 @@ ${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.bat
         break
       case "komiku":
         if (!q) return reply(`judulnya?\n${prefix}komiku mao gakuin`);
-        let komik = await hx.komiku(q);
+        let komik = await god.komiku(q);
         result = `*Title* : ${komik.title}\n
 *Title Indo* : ${komik.indo}\n
 *Update* : ${komik.update}\n
@@ -2533,21 +2533,21 @@ ${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.bat
         break
       case "chara":
         if (!q) return reply(`gambar apa?\n${prefix}chara master`);
-        let im = await hx.chara(q);
+        let im = await god.chara(q);
         let acak = im[Math.floor(Math.random() * im.length)];
         let li = await getBuffer(acak);
         await master.sendMessage(from, li, image, { quoted: god });
         break
       case "pinterest":
         if (!q) return reply("gambar apa?");
-        let pin = await hx.pinterest(q);
+        let pin = await god.pinterest(q);
         let ac = pin[Math.floor(Math.random() * pin.length)];
         let di = await getBuffer(ac);
         await master.sendMessage(from, di, image, { quoted: god });
         break
       case "playstore":
         if (!q) return reply("lu nyari apa?");
-        let play = await hx.playstore(q);
+        let play = await god.playstore(q);
         let store = "❉─────────────────────❉\n";
         for (let i of play) {
           store += `\n*「 _PLAY STORE_ 」*\n
@@ -2560,7 +2560,7 @@ ${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.bat
         break
         case "igstory":
         if (!q) return reply("Usernamenya?");
-        hx.igstory(q).then(async (result) => {
+        god.igstory(q).then(async (result) => {
           for (let i of result.medias) {
             if (i.url.includes("mp4")) {
               let link = await getBuffer(i.url);
@@ -2580,7 +2580,7 @@ ${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.bat
         break
         case "linkwa":
         if (!q) return reply("cari group apa?");
-        hx.linkwa(q).then((result) => {
+        god.linkwa(q).then((result) => {
           let res = "*「 _LINK WA_ 」*\n\n";
           for (let i of result) {
             res += `*Nama*: *${i.nama}\n*Link*: ${i.link}\n\n`;
@@ -2710,13 +2710,13 @@ ${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.bat
  		if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply(mess.Iv)
  		if (!q) return reply('Linknya?')
  		reply(mess.wait)
-		hx.ttdownloader(`${args[0]}`)
+		god.ttdownloader(`${args[0]}`)
     		.then(result => {
     		const { wm, nowm, audio } = result
     		axios.get(`https://tinyurl.com/api-create.php?url=${nowm}`)
     		.then(async (a) => {
     		me = `*Link* : ${a.data}`
-		hexa.sendMessage(from,{url:`${nowm}`},video,{mimetype:'video/mp4',quoted:god,caption:me})
+		master.sendMessage(from,{url:`${nowm}`},video,{mimetype:'video/mp4',quoted:god,caption:me})
 		})
 		})
      		.catch(e => console.log(e))
@@ -2725,7 +2725,7 @@ ${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.bat
  		if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply(mess.Iv)
  		if (!q) return reply('Linknya?')
  		reply(mess.wait)
- 		hx.ttdownloader(`${args[0]}`)
+ 		god.ttdownloader(`${args[0]}`)
     		.then(result => {
     		const { audio} = result
             sendMediaURL(from,audio,'')
@@ -2746,7 +2746,7 @@ ${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.bat
           return reply(mess.Iv);
         if (!q) return reply("Linknya?");
         ten = args[0];
-        var res = await hx.twitter(`${ten}`);
+        var res = await god.twitter(`${ten}`);
         ren = `${g.HD}`;
         sendMediaURL(from, ren, "DONE");
         break
@@ -2756,7 +2756,7 @@ ${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.bat
           return reply(mess.Iv);
         reply(mess.wait);
         te = args.join(" ");
-        hx.fbdown(`${te}`).then((G) => {
+        god.fbdown(`${te}`).then((G) => {
           ten = `${G.HD}`;
           sendMediaURL(from, ten, `*Link video_normal* : ${G.Normal_video}`);
         });
@@ -2766,7 +2766,7 @@ ${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.bat
           return reply(mess.Iv);
         if (!q) return reply("Linknya?");
         reply(mess.wait);
-        hx.igdl(args[0]).then(async (result) => {
+        god.igdl(args[0]).then(async (result) => {
           for (let i of result.medias) {
             if (i.url.includes("mp4")) {
               let link = await getBuffer(i.url);
@@ -2825,7 +2825,7 @@ break
 
 case 'script':
 case 'sc':
-reply(`${shp5} *Free Script Bot Wa* ${shp5} :\n\nhttps://github.com/Hexagonz/SELF-HX\n\nhttps://github.com/MhankBarBar/termux-wabot`)
+reply(`${shp5} *Free Script Bot Wa* ${shp5} :\n\nhttps://github.com/hexagonz/SELF-HX\n\nhttps://github.com/MhankBarBar/termux-wabot`)
 break
                
 //***GROUP ONLY***/
