@@ -2063,7 +2063,7 @@ case 'maker2d2':
 					buffer1 = await getBuffer(anu.result.url)
 					master.sendMessage(from, buffer1, image, {quoted: god, thumbnail: fakeimg4})
 					break				 
-						case 'nuliskiri': case 'nulis':					 
+				            	case 'nuliskiri': 			 
 									if (args.length < 1) return reply('mau nulis apa?')
 									reply(mess.wait)
 									const tulisan = q
@@ -2086,10 +2086,8 @@ case 'maker2d2':
 									])
 									.on('error', () => reply(mess.error))
 									.on('exit', () => {
-										master.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkiri.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption:'Jangan sampai ketahuan'})									
-										})
-									}
-									break
+										master.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkiri.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption:'Jangan sampai ketahuan'})									 
+			  					        break
 					        	case 'nuliskanan': 
 						            if (args.length < 1) return reply('mau nulis apa?')
 									reply(mess.wait)
@@ -2113,9 +2111,7 @@ case 'maker2d2':
 									])
 									.on('error', () => reply(mess.error))
 									.on('exit', () => {
-										master.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkanan.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption:'Jangan sampai ketahuan'})										
-										})
-									}
+										master.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkanan.jpg'), image, {thumbnail:Buffer.alloc(0),quoted: god, caption:'Jangan sampai ketahuan'})																		 
 									break
 						        case 'foliokiri': 
 						            if (args.length < 1) return reply('mau nulis apa?')
